@@ -1,0 +1,6 @@
+- post = @post.first
+%h2#post-title= post.title
+#post-info= pretty_date(post.created_at)
+.m-h600.post= post.body
+
+%a{ href: "/posts" } back to posts list

@@ -1,0 +1,23 @@
+%table.table.table-striped.table-hover
+  %caption Posts
+  %thead
+    %tr
+      %th{ width: '10%' } ID
+      %th{ width: '50%' } Title
+      %th{ width: '20%' } Create at
+      %th{ width: '20%', colspan: '3' } Actions
+  %tbody
+    - for post in @posts
+      %tr
+        %td= post.id
+        %td
+          %a{ href: "/posts/#{post.id}" }= post.title
+        %td= pretty_date(post.created_at)
+        %td 
+          %a{ href: "/posts/#{post.id}" } show
+        %td
+          %a{ href: "/posts/#{post.id}/edit" } edit
+        %td
+          %form{ method: 'post', action: "/posts/#{post.id}" }
+            %input{ type: 'hidden', name: '_method', value: 'delete' }
+            %button.btn.btn-link{ type: 'submit' } delete

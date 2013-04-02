@@ -1,0 +1,15 @@
+%head
+  %script{ type: "text/javascript", src: "/vendor/jquery-1.9.1.min.js" }
+  %script{ type: "text/javascript", src: "/vendor/bootstrap/js/bootstrap.min.js" }
+  %link{ rel: "stylesheet", href: "/vendor/bootstrap/css/bootstrap.min.css" }
+  %link{ rel: "stylesheet", href: "/vendor/bootstrap/css/bootstrap-responsive.min.css" }
+  %link{ rel: "stylesheet", href: "/vendor/stylesheets/application.css" }
+%body
+  #nav.navbar.navbar-fixed-top
+    #nav-content.navbar-inner
+      .container
+        %a.brand{ href: "#" } Sinatra Test
+  .container
+    #main.mt100
+      =yield
+  #footer
