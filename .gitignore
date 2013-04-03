@@ -2,3 +2,4 @@
 .ruby-gemset
 *.sublime-*
 .sass-cache/*
+config/database.yml
